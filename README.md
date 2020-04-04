@@ -4,4 +4,8 @@ Simple application for showing and editing the scoreboard. The application is sp
 ## Technologies
 * database: PostgreSQL
 * backend: Java 1.8 + Spring Boot
-* frontend: AngularJS
+* frontend: JavaScrip, JQuery, Bootstrap, FontAwesome, HTML, CSS
+
+## How to run
+* backend: mvn spring-boot:run
+* frontent: browser
