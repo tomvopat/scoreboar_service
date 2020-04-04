@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Marking Outliers</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Scoreboard Service</a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/tomvopat/">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://tomvopat.com/">Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/tomvopat">Github</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron text-center text-md-left">
+        <h1 class="display-4">Find out who is the best.</h1>
+        <p>In the table below you can see the results from the competition. Feel free to adjust them, but no cheating...</p>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 col-md-11 mt-2">
+            <table id="table-score" class="table table-bordered">
+                <thead class="thead-dark">
+                <tr>
+                    <th class="text-center" scope="col"># <i class="fas fa-sort"></i></th>
+                    <th scope="col">Name <i class="fas fa-sort"></i></th>
+                    <th scope="col">Score <i class="fas fa-sort"></i></th>
+                </tr>
+                </thead>
+                <tbody id="scores"></tbody>
+            </table>
+            <div class="container d-inline-flex justify-content-md-end justify-content-center">
+                <button id="add-button" type="button" data-toggle="modal" data-target="#newScoreModal" class="btn btn-success">Add</button>
+
+                <div class="modal fade" id="newScoreModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add new record</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <form id="newRecordForm">
+                                    <div class="form-group">
+                                        <label for="name" class="col-form-label">Name:</label>
+                                        <input type="text" class="form-control" id="name" value="John" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="score" class="col-form-label">Score:</label>
+                                        <input type="number" class="form-control" id="score" value="0" required>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button id="saveButton" type="button" class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="container py-3 text-muted text-center">
+    © 2020 Tomáš Vopat
+</footer>
+
+<script src="libs/jquery-3.4.1.min.js"></script>
+<script src="libs/jquery.dataTables.min.js"></script>
+<script src="libs/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="libs/all.min.js"></script>
+</body>
+</html>

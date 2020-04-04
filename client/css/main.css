@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+}
+
+.jumbotron {
+    margin-top: .3em !important;
+}
+
+.fa-plus-square {
+    color: #1e7e34;
+}
+
